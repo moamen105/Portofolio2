@@ -37,14 +37,12 @@ window.onscroll = () => {
             let home = document.querySelector('#home');
             // active sections for animation on scroll
             sec.classList.add('show-animate');
-            home.classList.toggle('img-animate')
 
 
         }
 
         else {
             sec.classList.remove('show-animate');
-            home.classList.toggle('img-animate')
         }
 
         
