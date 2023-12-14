@@ -26,10 +26,10 @@ body {
 /*-------------- my variables ----------------*/
 
 :root {
-    --bg-color: #081b29;
-    --second-bg-color: #112e42;
-    --text-color: #ededed;
-    --main-color: #00abf0;
+    --bg-color: #222;
+    --second-bg-color: #111;
+    --text-color: wheat;
+    --main-color: #fca211;
 }
 
 
@@ -50,7 +50,7 @@ body {
 }
 
 .header.sticky {
-    background-color: var(--bg-color);
+    background-color: var(--second-bg-color);
 }
 
 /*-------------- Logo ----------------*/
@@ -100,6 +100,10 @@ section {
     display: flex;
     align-items: center;
     padding: 0 9%;
+    background-image: url(/media/bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 95%;
 }
 
 .home-content {
@@ -114,6 +118,7 @@ section {
     font-weight: 700;
     line-height: 1.3;
 }
+
 
 .home-content h1 span {
     color: var(--text-color);
@@ -132,10 +137,11 @@ section {
     background-repeat: no-repeat;
     -webkit-background-clip: text;
     background-position: -33rem 0;
+    
 }
 
 .home.show-animate .home-content .text-animate h3 {
-    animation: homeBgText 6s linear infinite;
+    animation: homeBgText 3.5s linear infinite;
     animation-delay: 2s;
 }
 
@@ -151,7 +157,7 @@ section {
 }
 
 .home.show-animate .home-content .text-animate h3::before {
-    animation: homeCursorText 6s linear infinite;
+    animation: homeCursorText 3.5s linear infinite;
     animation-delay: 2s;
 }
 
@@ -959,3 +965,27 @@ section:nth-child(odd) .animate.scroll,
     }
 }
 
+
+
+@keyframes slideBackground {
+    0% {
+        background-position: 100% -70%;
+        opacity: 0%;
+    }
+
+    50% {
+        opacity: 50%;
+    }
+
+    100% {
+        background-position: center;
+        opacity: 100%;
+    }
+}
+
+
+
+
+.img-animate {
+    animation: slideBackground 1.9s ease-out;
+}

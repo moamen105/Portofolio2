@@ -2,6 +2,7 @@
 
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
+let home = document.querySelector('.home');
 
 menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
@@ -33,14 +34,20 @@ window.onscroll = () => {
 
             });
 
+            let home = document.querySelector('#home');
             // active sections for animation on scroll
             sec.classList.add('show-animate');
+            home.classList.toggle('img-animate')
+
 
         }
 
         else {
             sec.classList.remove('show-animate');
+            home.classList.toggle('img-animate')
         }
+
+        
             
     });
     
@@ -61,3 +68,8 @@ window.onscroll = () => {
     footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
     
 }
+
+
+
+
+
